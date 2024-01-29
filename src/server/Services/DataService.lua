@@ -8,7 +8,7 @@ local DataShared = require(ReplicatedStorage.Shared.Data.DataShared)
 
 local ProfileVersion = 1
 
-local DataService = Knit.CreateService {
+local DataService = {
     Name = "DataService",
     Client = {
         KeyChanged = Knit.CreateSignal()

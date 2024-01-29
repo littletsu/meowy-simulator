@@ -4,7 +4,8 @@ local Workspace = game:GetService("Workspace")
 local Knit = require(ReplicatedStorage.Packages.Knit)
 local Promise = require(Knit.Util.Promise)
 local RandomArea = require(ReplicatedStorage.Shared.Module.RandomArea)
-local SpawnerService = Knit.CreateService { Name = "SpawnerService" }
+local DataService = require(script.Parent.DataService)
+local SpawnerService = { Name = "SpawnerService" }
 
 local OriginalCat =  Workspace.Prefabs.Cat
 local CatClone = OriginalCat:Clone()
@@ -13,7 +14,6 @@ local SpawnArea = Workspace.CatSpawnArea
 local SpawnTime = 10
 
 function SpawnerService:KnitStart()
-    local DataService = Knit.GetService("DataService") :: typeof(require(script.Parent.DataService))
     local debounce: {[Player]: boolean} = {}
     local function SpawnMeow()
         local spawnPosition = RandomArea(SpawnArea)

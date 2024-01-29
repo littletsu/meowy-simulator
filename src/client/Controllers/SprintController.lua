@@ -2,7 +2,7 @@ local ContextActionService = game:GetService("ContextActionService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Knit = require(ReplicatedStorage.Packages.Knit)
 
-local SprintController = Knit.CreateController { Name = "SprintController" }
+local SprintController = { Name = "SprintController" }
 
 function SprintController:KnitStart()
     local Humanoid = Knit.Player.Character.Humanoid

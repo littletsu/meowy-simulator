@@ -4,7 +4,7 @@ local Callbacks = require(ReplicatedStorage.Shared.Module.Callbacks)
 local DataShared = require(ReplicatedStorage.Shared.Data.DataShared)
 local Signal = require(ReplicatedStorage.Packages.Signal)
 
-local DataController = Knit.CreateController { Name = "DataController" }
+local DataController = { Name = "DataController" }
 local DataService
 local callbacks = {}
 local localData = {}
